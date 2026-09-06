@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>LUCKY SLOTA</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="logo">🎰</div>
+      <div>
+        <h1>LUCKY SLOTA</h1>
+        <p>Virtuele slots • geen echt geld</p>
+      </div>
+    </header>
+
+    <section class="balance-card">
+      <span>🪙 COINS</span>
+      <strong id="balance">1.000</strong>
+    </section>
+
+    <section class="machine">
+      <div class="reels">
+        <div class="reel" id="reel1">🍒</div>
+        <div class="reel" id="reel2">🍋</div>
+        <div class="reel" id="reel3">⭐</div>
+      </div>
+
+      <div id="message" class="message">
+        Klaar? Druk op SPIN!
+      </div>
+
+      <button id="spin" class="spin">
+        SPIN — 10 🪙
+      </button>
+    </section>
+
+    <section class="paytable">
+      <h2>PRIJZEN</h2>
+      <div>7️⃣ 7️⃣ 7️⃣ <b>+500</b></div>
+      <div>💎 💎 💎 <b>+250</b></div>
+      <div>⭐ ⭐ ⭐ <b>+150</b></div>
+      <div>🍒 🍒 🍒 <b>+100</b></div>
+      <div>🍋 🍋 🍋 <b>+75</b></div>
+      <div>2 dezelfde <b>+20</b></div>
+    </section>
+
+    <button id="reset" class="reset">
+      Reset naar 1.000 coins
+    </button>
+
+    <p class="legal">
+      Alleen virtuele punten. Coins hebben geen geldwaarde en
+      kunnen niet worden gekocht, verkocht of uitbetaald.
+    </p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
