@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+
+  color: #fff;
+  background: #090b16;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 50% -10%,
+      #3c1a64 0,
+      #15132c 35%,
+      #090b16 75%
+    );
+
+  padding: 18px;
+}
+
+.app {
+  max-width: 520px;
+  margin: auto;
+  padding-bottom: 28px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0 18px;
+}
+
+.logo {
+  font-size: 44px;
+}
+
+h1 {
+  font-size: 26px;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin: 3px 0 0;
+  color: #aaa8ba;
+  font-size: 13px;
+}
+
+.balance-card,
+.machine,
+.paytable {
+  background: rgba(24, 25, 45, .9);
+  border: 1px solid rgba(255, 255, 255, .09);
+  border-radius: 22px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, .25);
+}
+
+.balance-card {
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.balance-card span {
+  color: #bdb9ce;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.balance-card strong {
+  font-size: 26px;
+  color: #ffd84d;
+}
+
+.machine {
+  padding: 20px;
+  text-align: center;
+}
+
+.reels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  background: #0b0d18;
+  padding: 12px;
+  border-radius: 18px;
+  border: 1px solid #36364d;
+}
+
+.reel {
+  height: 105px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(#fff, #e9e9f1);
+  border-radius: 14px;
+  font-size: 50px;
+  color: #111;
+  box-shadow: inset 0 -8px 0 rgba(0, 0, 0, .08);
+}
+
+.reel.spinning {
+  animation: shake .08s linear infinite;
+}
+
+@keyframes shake {
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+.message {
+  min-height: 48px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: #e7e4ef;
+}
+
+.spin {
+  width: 100%;
+  border: 0;
+  border-radius: 15px;
+  padding: 17px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #17120a;
+  background: linear-gradient(180deg, #ffe777, #ffbe22);
+  cursor: pointer;
+}
+
+.spin:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.paytable {
+  margin-top: 16px;
+  padding: 18px;
+}
+
+h2 {
+  font-size: 14px;
+  color: #aaa8ba;
+  margin: 0 0 10px;
+}
+
+.paytable div {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
+}
+
+.paytable b {
+  color: #ffd84d;
+}
+
+.reset {
+  margin: 16px auto 0;
+  display: block;
+  border: 1px solid #44445b;
+  background: transparent;
+  color: #bdb9ce;
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+
+.legal {
+  text-align: center;
+  color: #77758a;
+  font-size: 11px;
+  line-height: 1.4;
+  margin: 14px 15px;
+}
+
+@media (max-width: 360px) {
+  .reel {
+    height: 90px;
+    font-size: 42px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
